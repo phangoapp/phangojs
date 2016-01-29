@@ -1,0 +1,17 @@
+<!--A simple base template index-->
+{{content_page}}
+<p id="hello"></p>
+<p><a href="#" id="url_effect">Push here for url effect</a></p>
+<script language="javascript">
+
+	$('#hello').append('Hello World');
+    
+    $('#url_effect').click( function () {
+       
+        app.load_view(arr_content, 'other');
+        
+        return false;
+        
+    });
+
+</script>

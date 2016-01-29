@@ -1,0 +1,50 @@
+<!--A simple base html5 index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title></title>
+<head>
+<!--load all javascript and css, this is a simple html template with an interface for load different views and ajax-->
+<script language="javascript" src="../js/mustache.js"></script>
+<script language="javascript" src="../js/jquery.min.js"></script>
+<script language="javascript" src="../js/phangoapp.js"></script>
+<link href="css/example.css" rel="stylesheet" type="text/css"/>
+<!--Here i load the functions for obtain urls, etc, switchs, etc.<script language="javascript" src="js/jango.js"></script>-->
+<script language="javascript">
+
+var arr_content={content_page: 'This is a content'};
+
+$(document).ready( function () {
+	
+	get=obtain_get_url(location.href);
+	
+	app=new AppTpl('body');
+    
+    if(get['template']==undefined)
+    {
+                
+        get['template']='index';
+                
+    }
+	
+	app.load_view(arr_content, get['template']);
+	
+	
+});
+
+
+	
+</script>
+</head>
+<body>
+<!--First loading-->
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+La estructura sería así:
+
+- Estructura básica, hasta el body.
+- Paso la url al controlador y obtengo la plantilla dle controlador junto con los datos en uan llamada ajax.
+- No nos complicamos, al ser en local se puede cargar todos los javascript y css's. Usaremos de base bootstrap o no.
