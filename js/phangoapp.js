@@ -7,7 +7,19 @@ function AppTpl(tag)
 	this.no_parse=0;
 
 }
-
+/*
+window.onpopstate = function(event) {
+    
+  //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+  alert(JSON.stringify(event));
+  //$(data.tag).html(Mustache.render(event.state.page, arr_content));
+  
+};*/
+/*
+$(window).bind('popstate', function(event) {
+    alert(event);
+});
+*/
 
 AppTpl.prototype.load_view = function(arr_content, template_name) {
 	
@@ -34,15 +46,15 @@ AppTpl.prototype.load_view = function(arr_content, template_name) {
 			}
             
             //Change page
-            
-            var stateObj = { page: template_name };
+            /*
+            var stateObj = { page: [template_name] };
             
             if(template_name!='index')
             {
             
                 history.pushState(stateObj, template_name, "index.html?template="+template_name);
                 
-            }
+            }*/
 			
 		}).fail(function() {
 			
